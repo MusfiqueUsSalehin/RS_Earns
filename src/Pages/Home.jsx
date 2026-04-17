@@ -4,7 +4,7 @@ import Logo from '../assets/logo.svg';
 const Home = ({ onStart }) => {
   return (
     /* 1. Container: px-6 for better padding on small screens, flex-grow to push footer down */
-    <div className="relative w-full max-w-5xl mx-auto px-6 py-10 md:py-20 min-h-[85vh] flex flex-col justify-center items-center overflow-hidden">
+    <div className="relative w-full max-w-5xl caret-transparent mx-auto px-6 py-10 md:py-20 min-h-[85vh] flex flex-col justify-center items-center overflow-hidden">
       
       {/* 2. Content Wrapper: Ensures text doesn't hit screen edges */}
       <div className="z-10 text-center space-y-6 md:space-y-8">

@@ -40,7 +40,7 @@ const SalaryCalculator = ({ onBack }) => {
   const netSalary = BASIC + totalKPI + totalOT - totalDeduction;
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 animate-fade-in-up">
+    <div className="max-w-3xl mx-auto px-4 py-8 animate-fade-in-up caret-transparent">
       <button onClick={onBack} className="flex items-center text-gray-500 hover:text-[#D70F64] mb-6 transition-colors font-medium group">
         <IoChevronBack className="w-5 h-5 mr-1 transition-transform group-hover:-translate-x-1" />
         
@@ -48,7 +48,7 @@ const SalaryCalculator = ({ onBack }) => {
       </button>
 
       <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-        <div className="bg-[#D70F64] p-6 text-white text-center">
+        <div className="bg-[#D70F64] p-6 text-white text-center caret-transparent">
           <h2 className="text-2xl font-bold italic tracking-tight">RS agent's salary Calculator</h2>
           <p className="text-pink-100 text-sm opacity-90">Calculate your monthly earnings based on performance metrics</p>
         </div>
@@ -77,14 +77,14 @@ const SalaryCalculator = ({ onBack }) => {
                       <label className="block text-[10px] text-gray-400 font-bold uppercase mb-1">Monthly Target %</label>
                       <input 
                         type="number" name={kpi.target} value={inputs[kpi.target]} onChange={handleChange}
-                        className="w-full p-3 text-black bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-gray-400 outline-none font-black"
+                        className="w-full p-3 text-black bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-gray-400 outline-none font-black caret-black"
                       />
                     </div>
                     <div>
                       <label className="block text-[10px] text-gray-400 font-bold uppercase mb-1">Your Achievement %</label>
                       <input 
                         type="number" name={kpi.achieved} value={inputs[kpi.achieved]} onChange={handleChange}
-                        className="w-full p-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#D70F64] outline-none font-black text-[#D70F64]"
+                        className="w-full p-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#D70F64] outline-none font-black text-[#D70F64] caret-black"
                       />
                     </div>
                   </div>
@@ -96,11 +96,11 @@ const SalaryCalculator = ({ onBack }) => {
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-2">
               <h3 className="text-gray-800 font-bold">OT Days</h3>
-              <input type="number" name="otHours" value={inputs.otHours} onChange={handleChange} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-green-500 outline-none font-black text-green-600" />
+              <input type="number" name="otHours" value={inputs.otHours} onChange={handleChange} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-green-500 outline-none font-black text-green-600 caret-black" />
             </div>
             <div className="space-y-2">
               <h3 className="text-gray-800 font-bold">Unpaid Leaves</h3>
-              <input type="number" name="leaves" value={inputs.leaves} onChange={handleChange} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-red-500 outline-none font-black text-red-600" />
+              <input type="number" name="leaves" value={inputs.leaves} onChange={handleChange} className="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-red-500 outline-none font-black text-red-600 caret-black" />
             </div>
           </div>
 
