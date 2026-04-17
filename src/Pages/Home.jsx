@@ -34,7 +34,7 @@ const Home = ({ onStart }) => {
           <button 
             onClick={onStart}
             className="w-full md:w-auto bg-[#D70F64] text-white px-12 py-4 rounded-full font-bold text-lg shadow-xl 
-                       hover:bg-[#b00d52] hover:shadow-lg hover:shadow-pink-500/40 hover:-translate-y-1 active:scale-95 transition-all duration-300"
+                       hover:bg-[#b00d52] hover:shadow-lg hover:shadow-pink-500/40 hover:-translate-y-1 active:scale-95 transition-all duration-300 cursor-pointer"
           >
             Start Calculation
           </button>

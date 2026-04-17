@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.svg';
 
 const NavBar = ({ onLogoClick }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-transparent border-gray-100 px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+    <nav 
+      className={`px-6 py-4 mt-4 flex justify-between caret-transparent items-center sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/30 backdrop-blur-md border-b border-gray-100 shadow-sm rounded-3xl' 
+          : 'bg-transparent border-transparent'
+      }`}
+    >
       {/* Clickable Logo Area */}
       <div 
         className="flex items-center gap-2 cursor-pointer transition-transform active:scale-95" 
